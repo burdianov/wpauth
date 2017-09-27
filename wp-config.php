@@ -55,6 +55,9 @@ define('SECURE_AUTH_SALT', 'put your unique phrase here');
 define('LOGGED_IN_SALT',   'put your unique phrase here');
 define('NONCE_SALT',       'put your unique phrase here');
 
+/* JWT Settings */
+define('JWT_AUTH_SECRET_KEY', 'Mjvi<g-5,WB|H|K}U=n,$PuQjgX:2G&8:$d+:Ibvyb>6A(yQ}m -u`!JdIZ2+/AH');
+define('JWT_AUTH_CORS_ENABLE', true);
 /**#@-*/
 
 /**
