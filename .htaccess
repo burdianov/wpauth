@@ -2,15 +2,13 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /
-# JSON Web Token settings:
+RewriteBase /wpauth/
 RewriteCond %{HTTP:Authorization} ^(.*)
 RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
 RewriteRule ^index\.php$ - [E=X-HTTP_AUTHORIZATION:%{HTTP:Authorization},QSA,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [E=X-HTTP_AUTHORIZATION:%{HTTP:Authorization},QSA,L]
-# END JWT settings
+RewriteRule . /wpauth/index.php [E=X-HTTP_AUTHORIZATION:%{HTTP:Authorization},QSA,L]
 </IfModule>
 
 # END WordPress
